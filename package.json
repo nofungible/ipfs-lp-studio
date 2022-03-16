@@ -1,0 +1,16 @@
+{
+  "name": "ipfs-lp-studio",
+  "version": "1.0.0",
+  "description": "Self-serve web interface to generate ipfs-lp albums.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.17.1",
+    "ipfs-lp": "git+https://github.com/nofungible/ipfs-lp.git#release/0.2.0-alpha"
+  },
+  "devDependencies": {}
+}
