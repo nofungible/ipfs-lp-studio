@@ -72,7 +72,7 @@ app.post('/publish', async (req, res) => {
         }, ALBUM_TTL);
 
 
-        return res.send(200);
+        return res.send(albumPath);
     } catch (err) {
         console.log(err);
     
