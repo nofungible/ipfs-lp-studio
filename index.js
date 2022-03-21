@@ -27,7 +27,7 @@ app.use(express.json());
 // General utility middleware for request preprocessing
 app.use((req, res, next) => {
     // Add full, original, human friendly URL w/ protocol to the request
-    req.fullOriginalUrl = `${req.secure ? 'https' : 'http'}://${req.get('host')}`;
+    req.fullOriginalUrl = `${req.protocol}://${req.get('host')}`;
 
     return next();
 });
