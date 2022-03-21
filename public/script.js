@@ -173,6 +173,13 @@
         });
 
         debounceInput(trackCidInput, function () {
+            if (!trackCidInput.value) {
+                trackCidInput.setAttribute('data-mime-type', '');
+                trackStatusSubtext.innerText = '-';
+
+                return false
+            }
+
             var startLoadTime = Date.now();
 
             trackStatusSubtext.innerText = 'Loading';
@@ -214,8 +221,17 @@
     var albumArtworkInput = document.getElementById('album-artwork-cid-input');
 
     debounceInput(albumArtworkInput, function () {
-        var startLoadTime = Date.now();
         var albumArtworkStatusText = document.getElementById('artwork-current-status');
+
+        if (!albumArtworkInput.value) {
+            albumArtworkInput.setAttribute('data-load-complete', false);
+            albumArtworkInput.setAttribute('data-mime-type', '');
+            albumArtworkStatusText.innerText = '-';
+
+            return false
+        }
+
+        var startLoadTime = Date.now();
 
         albumArtworkStatusText.innerText = 'Loading';
 
