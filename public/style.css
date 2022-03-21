@@ -1,0 +1,425 @@
+/* # CSS reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  font-family: Arial;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Prevent text highlighting */
+* {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+* {
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.header-text {
+    line-height: 30px;
+    font-size: 1.25rem;
+    color: gray;
+}
+
+.embossed-text {
+    text-shadow: 0px -1px 0px #919191;
+}
+
+/* Custom CSS */
+.track-metadata-container {
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    margin-top: 12.5px;
+    padding-bottom: 12.5px;
+    background-color: gray;
+    border: inset 5px white;
+}
+
+.track-header {
+    width: 100%;
+    height: 30px;
+    background: white;
+    text-align: center;
+}
+
+.track-header-remove-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif !important;
+    box-sizing: border-box;
+}
+
+.track-header-remove-button:hover {
+    cursor: pointer;
+}
+
+.track-header-remove-button.pressed {
+    background-color: gray;
+    color: #bababa;
+    border-left: inset 5px white;
+    border-bottom: inset 5px white;
+}
+
+.track-header-remove-button.pressed * {
+    color: #bababa;
+}
+
+.layer.top {
+    z-index: 999;
+}
+
+.layer.middle {
+    z-index: 666;
+}
+
+.layer.bottom {
+    z-index: 333;
+}
+
+html {
+    overflow-y: scroll;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    background: rgb(248,171,255);
+    background: -moz-linear-gradient(0deg, rgba(248,171,255,1) 0%, rgba(225,255,250,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(248,171,255,1) 0%, rgba(225,255,250,1) 100%);
+    background: linear-gradient(0deg, rgba(248,171,255,1) 0%, rgba(225,255,250,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f8abff",endColorstr="#e1fffa",GradientType=1);
+}
+
+.button {
+    display: inline-block;
+    width: auto;
+    background-color: white;
+    padding: 2.5px 5px;
+    border: inset 5px white;
+    margin-top: 12.5px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button.pressed {
+    background-color: gray;
+    border-color: gray;
+    color: #bababa;
+}
+
+.button.pressed * {
+    color: #bababa;
+}
+
+#add-track-button {
+    display: inline-block;
+    width: auto;
+    margin-left: 5px;
+}
+
+#album-required-info {
+    display: inline-block;
+    width: 300px;
+    position: relative;
+    border: inset 5px white;
+    background-color: gray;
+    padding-bottom: 12.5px;
+}
+
+#album-required-info label,
+.track-metadata-container label,
+#download-link-container {
+    font-size: 1.25rem;
+    line-height: 30px;
+    color: white;
+}
+
+#album-required-info-header {
+    width: 100%;
+    height: 30px;
+    background: white;
+    text-align: center;
+}
+
+#album-tracklist {
+    width: 100%;
+    text-align: center;
+}
+
+#content {
+    position: relative;
+    overflow: hidden;
+    padding: 25px;
+}
+
+#content-bg-fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .7;
+}
+
+#content-container {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    border: inset 5px white;
+    max-width: 1000px;
+}
+
+.current-status-text
+, #artwork-current-status-text {
+    color: white;
+    margin: 5px;
+    font-size: 1.25rem;
+}
+
+#download-warning-text {
+    font-size: 1rem !important;
+    color: red !important;
+}
+
+#footer {
+	height: 50px;
+	position: absolute;
+	display: table;
+	bottom: 0;
+	width: 100%;
+    background-image: linear-gradient(45deg, #DDFEF9 25%, transparent 25%), linear-gradient(-45deg, #DDFEF9 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #DDFEF9 75%), linear-gradient(-45deg, transparent 75%, #DDFEF9 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+	text-align: center;
+    border-top: solid 5px #DDFEF9;
+    box-sizing: content-box;
+    margin-top: 50px;
+}
+
+#footer-push {
+	width: 100%;
+    /* footer height + padding + margin */
+	height: 100px; 
+}
+
+#left-content {
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+#right-content {
+    position: relative;
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+
+#preview-container {
+    position: relative;
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: inset 5px white;
+    background-color: gray;
+    box-sizing: border-box;
+}
+
+#preview-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+#preview-msg-table  {
+    position: absolute;
+    display: table;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#preview-msg-table-cell  {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#preview-msg  {
+    color: white;
+    font-size: 1.5rem;
+}
+
+#title {
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    width: 90%;
+    margin: 25px auto 0;
+    font-weight: bold;
+    font-size: 2.15rem;
+    letter-spacing: .75rem;
+    text-align: center;
+    border: inset 5px white;
+    max-width: 1000px;
+}
+
+#title-text {
+    font-family: Arial, Helvetica, sans-serif !important;
+    background: -webkit-linear-gradient(black, silver);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#headline {
+    text-align: center;
+    font-size: 1.75rem;
+    padding: 25px 0;
+    font-style: italic;
+    line-height: 2rem;
+}
+
+#headline span {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#rainbow-border {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    vertical-align: middle;
+    background: black; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, red, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, red, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, red, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, red, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
+}
+
+@media only screen and (max-width: 960px) {
+    #preview-container {
+        width: 375px;
+        height: 375px;
+    }
+
+    #left-content, #right-content {
+        width: 100%;
+    }
+
+    #generate-album-button {
+        margin-bottom: 25px;
+    }
+
+    #title {
+        font-size: 1.75rem;
+        letter-spacing: .75rem;
+    }
+
+    #headline {
+        font-size: 1.6rem;
+        line-height: 1.95rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #title {
+        font-size: 1.5rem;
+        letter-spacing: .5rem;
+    }
+
+    #headline {
+        font-size: 1.35rem;
+        line-height: 1.45;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #preview-container {
+        width: 325px;
+        height: 325px;
+    }
+
+    #title {
+        font-size: 1.35rem;
+        letter-spacing: .35rem;
+    }
+
+    #content {
+        padding: 12.5px;
+    }
+
+    #headline {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+}

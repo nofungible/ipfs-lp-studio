@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <p id="title"><span id="emoji-1">🐬</span> <span id="title-text">IPFS-LP $TUDIØ</span> <span id="emoji-2">🌴</span></p>
+    <p id="headline">Web-based client for <a href="https://github.com/nofungible/ipfs-lp" target="_blank">ipfs-lp</a>.<br><span><span id="rainbow-border"></span>Generate full length, interactive albums<br>with tracks and artwork backed by <a href="https://ipfs.io/" target="_blank">IPFS</a>.</span></p>
+        <div id="content-container">
+          <div id="content-bg-fill" class="layer bottom"></div>
+          <div id="content" class="layer top">
+            <div id="left-content">
+              <div id="preview-container">
+                <div id="preview-msg-table">
+                  <div id="preview-msg-table-cell">
+                    <p id="preview-msg">Add album metadata, add tracks<br>and generate album to view preview.</p>
+                  </div>
+                </div>
+              </div>
+              <p id="download-link-container">Download: <span id="download-link-wrapper">-</span></p>
+              <div>
+                <div id="generate-album-button" class="button"><span class="header-text embossed-text">generate album</span></div>
+              </div>
+            </div>
+
+            <div id="right-content">
+              <div id="album-required-info">
+                <div id="album-required-info-header"><span class="header-text">Album</span></div>
+                <div id="album-title-input-container">
+                  <label for="album-title-input">Album Title</label><br>
+                  <input type="text" id="album-title-input">
+                </div>
+                <div id="album-artwork-input-container">
+                  <label for="album-artwork-cid-input">Album Artwork CID</label><br>
+                  <input type="text" name="album-artwork-cid" id="album-artwork-cid-input">
+                  <p id="artwork-current-status-text">Info: <span id="artwork-current-status">-</span></p>
+                </div>
+              </div>
+              <div id="album-tracklist-container">
+                <div id="album-tracklist"></div>
+                <div id="add-track-button" class="button"><span class="header-text embossed-text">+ add track</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div id="footer-push"></div>
+      
+        <div id="footer"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
