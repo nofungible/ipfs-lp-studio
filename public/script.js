@@ -338,7 +338,7 @@
             var downloadLink = document.createElement('a');
 
             downloadLink.href = jsonBody.albumDownloadLink;
-            downloadLink.innerText = jsonBody.albumName;
+            downloadLink.innerText = truncateString(albumPayload.title) + ' .zip file';
 
             var linkWrapper = document.getElementById('download-link-wrapper');
 
@@ -372,6 +372,6 @@
     }
 
     function truncateString(str) {
-        return str.length > 18 ? str.substr(0, 15) + '...' : str;
+        return str.length > 18 ? str.substring(0, 14) + '...' : str;
     }
 })();

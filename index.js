@@ -125,11 +125,11 @@ async function zipAlbumFiles(albumPath, albumName) {
 
     return new Promise((resolve, reject) => {
         const zipOpts = [
-            zipPath,
+            `"${zipPath}"`,
             '-j',
-            `${albumPath}/index.html`,
-            `${albumPath}/styles.css`,
-            `${albumPath}/script.js`
+            `"${albumPath}/index.html"`,
+            `"${albumPath}/styles.css"`,
+            `"${albumPath}/script.js"`
         ];
 
         exec(`zip ${zipOpts.join(' ')}`, {timeout: 2000}, (error) => {
