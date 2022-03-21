@@ -418,7 +418,8 @@ html {
         padding: 12.5px;
     }
 
-    #headline {
+    #headline,
+    #preview-msg {
         font-size: 1.1rem;
         line-height: 1.5rem;
     }
