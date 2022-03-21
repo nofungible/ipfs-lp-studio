@@ -11,9 +11,9 @@ const {
 
 const ALBUM_TTL = 1 * 60 * 1000;
 const GATEWAY_LIST = [
-    'https://cloudflare-ipfs.com',
     'https://ipfs.io',
-    'https://gateway.pinata.cloud'
+    'https://gateway.pinata.cloud',
+    'https://cloudflare-ipfs.com'
 ];
 
 const app = express();
