@@ -324,7 +324,9 @@
 
             iframeEl.setAttribute('id', 'album-preview');
 
-            document.getElementById('preview-msg-table').classList.add('hidden');
+            var messageTable = document.getElementById('preview-msg-table');
+
+            messageTable && messageTable.classList.add('hidden');
 
             var previewContainer = document.getElementById('preview-container');
 
