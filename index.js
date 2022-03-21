@@ -19,7 +19,7 @@ const GATEWAY_LIST = [
 const app = express();
 
 // Set static file directory
-app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/public`), {dotfiles: 'ignore'});
 
 // Apply body parsing middleware
 app.use(express.json());
