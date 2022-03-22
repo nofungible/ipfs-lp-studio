@@ -184,7 +184,7 @@
 
             trackStatusSubtext.innerText = 'Loading';
 
-            fetch('https://ipfs.io/ipfs/' + trackCidInput.value, {method: 'HEAD'})
+            fetch('https://ipfs.io/ipfs/' + trackCidInput.value + '?ts=' + Date.now(), {method: 'HEAD'})
             .then(function(res) {
                 var mimeType = res.headers.get('Content-Type');
 
@@ -193,10 +193,6 @@
                 }, calcLoadTime(startLoadTime));
 
                 trackCidInput.setAttribute('data-mime-type', mimeType);
-
-                fetch('https://ipfs.io/ipfs/' + trackCidInput.value, {method: 'GET'}).catch(function () {
-                    console.error('Failed to preload track asset');
-                });
             })
             .catch(function (err) {
                 console.error('Failed to load track IPFS resource');
@@ -235,7 +231,7 @@
 
         albumArtworkStatusText.innerText = 'Loading';
 
-        fetch('https://ipfs.io/ipfs/' + albumArtworkInput.value, {method: 'HEAD'})
+        fetch('https://ipfs.io/ipfs/' + albumArtworkInput.value + '?ts=' + Date.now(), {method: 'HEAD'})
         .then(function(res) {
             var mimeType = res.headers.get('Content-Type');
 
@@ -245,10 +241,6 @@
 
             albumArtworkInput.setAttribute('data-load-complete', true);
             albumArtworkInput.setAttribute('data-mime-type', mimeType);
-
-            fetch('https://ipfs.io/ipfs/' + albumArtworkInput.value, {method: 'GET'}).catch(function () {
-                console.error('Failed to preload artwork asset');
-            });
         })
         .catch(function (err) {
             console.error('Failed to load track IPFS resource');
